@@ -94,8 +94,8 @@ namespace CareerCloud.ADODataAccessLayer
                     poco.CountryCode = reader.GetString(2);
                     poco.Province = reader.GetString(3);
                     poco.Street = reader.GetString(4);
-                    poco.City = reader.IsDBNull(5) ? (String?)null : reader.GetString(5);
-                    poco.PostalCode = reader.IsDBNull(6) ? (String?)null : reader.GetString(6);
+                    poco.City = reader.IsDBNull(5) ? (String)null : reader.GetString(5);
+                    poco.PostalCode = reader.IsDBNull(6) ? (String)null : reader.GetString(6);
                     poco.TimeStamp = (byte[])reader[7];
 
                     pocos[index] = poco;
