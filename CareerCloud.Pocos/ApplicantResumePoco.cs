@@ -11,9 +11,12 @@ namespace CareerCloud.Pocos
     {
         [Key]
         public Guid Id { get; set; }
+        [ForeignKey("FK_Applicant_Resumes_Applicant_Profiles")]
         public Guid Applicant { get; set; }
         public String Resume { get; set; }
         [Column("Last_Updated")]
         public DateTime? LastUpdated { get; set; }
+
+        public virtual ApplicantProfilePoco ApplicantProfile { get; set; }
     }
 }

@@ -12,5 +12,8 @@ namespace CareerCloud.Pocos
         [Key]
         public String Code { get; set; }
         public String Name { get; set; }
+
+        public virtual ICollection<ApplicantProfilePoco> ApplicantProfiles { get; set; }
+        public virtual ICollection<ApplicantWorkHistoryPoco> ApplicantWorkHistories { get; set; }
     }
 }

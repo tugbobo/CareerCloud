@@ -11,6 +11,7 @@ namespace CareerCloud.Pocos
     {
         [Key]
         public Guid Id { get; set; }
+        [ForeignKey("FK_Security_Logins_Log_Security_Logins")]
         public Guid Login { get; set; }
         [Column("Source_IP")]
         public String SourceIP { get; set; }
@@ -18,5 +19,7 @@ namespace CareerCloud.Pocos
         public DateTime LogonDate { get; set; }
         [Column("Is_Succesful")]
         public Boolean IsSuccesful { get; set; }
+
+        public virtual SecurityLoginPoco SecurityLogin { get; set; }
     }
 }
